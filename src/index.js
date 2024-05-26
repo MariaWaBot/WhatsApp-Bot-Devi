@@ -3,7 +3,7 @@ import { createLogger } from './utils/Logger.js'
 import DatabaseHandler from './handler/Database.js'
 import getConfig from './getConfig.js'
 import { MongoClient } from 'mongodb'
-import Devi from './libs/Devi.js'
+import maria from './libs/Maria.js'
 import P from 'pino'
 ;(async () => {
     const log = createLogger()
@@ -20,7 +20,7 @@ import P from 'pino'
     const databaseHandler = new DatabaseHandler(config, log)
     const collection = mongo.db(config.session).collection('auth')
     const authSession = await useMongoDBAuthState(collection)
-    new Devi(config, mongo, authSession, log, databaseHandler, {
+    new maria(config, mongo, authSession, log, databaseHandler, {
         version: (await fetchLatestBaileysVersion()).version,
         auth: {
             creds: authSession.state.creds,
