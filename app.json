@@ -17,9 +17,7 @@
      "MONGO": {
       "description": "paste here your mongodb url"
      },
-    "IMGBB": {
-      "description": "put here your bot thumbnail IMGBB link"
-    },
+    
     "BRAINSHOP": {
       "description": "put here your brainshop api key"
     },
