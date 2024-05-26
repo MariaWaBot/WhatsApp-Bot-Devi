@@ -1,9 +1,9 @@
 import 'dotenv/config'
 const getConfig = () => {
     return {
-        name: process.env.NAME || 'Devi',
+        name: process.env.NAME || 'MARIA-MD,
         session: process.env.SESSION || 'session',
-        prefix: process.env.PREFIX || '#',
+        prefix: process.env.PREFIX || '.',
         port: process.env.PORT || 3000,
         imgbb: process.env.IMGBB,
         chatboturi: process.env.BRAINSHOP || '',
