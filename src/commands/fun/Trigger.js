@@ -26,8 +26,8 @@ export default class Command extends BaseCommand {
         const base64 = await this.client.util.bufferToBase64(await this.client.util.fetchBuffer(url))
         const icon = await getDisplayUrl(base64, this.client.config.imgbb, M.sender.username)
         const sticker = await new Sticker(await new Triggered(icon).build(), {
-            pack: 'Davi Bot',
-            author: 'By Debanjan',
+            pack: '💙𓆩‎✘AʏᴜSʜ✘𓆪_✰',
+            author: '',
             type: StickerTypes.FULL,
             quality: 70
         })
