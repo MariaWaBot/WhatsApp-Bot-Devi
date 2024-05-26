@@ -1,3 +1,4 @@
+
 FROM node:lts-buster
 
 RUN apt-get update && \
@@ -6,13 +7,12 @@ RUN apt-get update && \
   imagemagick \
   webp && \
   apt-get upgrade -y && \
-  npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
 
 COPY package.json .
 
-RUN yarn install
+RUN npm install && npm install qrcode-terminal
 
 COPY . .
 
-CMD ["yarn", "start"]
+EXPOSE 3000
